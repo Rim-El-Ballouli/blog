@@ -1,0 +1,26 @@
+---
+---
+
+@import 'jekyll-theme-leap-day';
+
+header h1{
+		text-shadow: 0px 2px 0px #381D11 !important;}
+#banner{
+	background: white !important;
+	border: 1px solid darkgray !important;}
+.fork{
+	background-color: white !important;
+	font-size:22px !important;}
+code{
+	background: none !important;
+	color: saddlebrown !important;}	
+pre{ 
+	background: #e7e2ce !important;}
+
+.highlight .p, .highlight .pi, .highlight .o, .highlight .ow {
+	color: #5a3722 !important;
+}
+
+.highlight .no{
+	color: #066f5c !important;}
+

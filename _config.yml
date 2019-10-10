@@ -1,1 +1,20 @@
 theme: jekyll-theme-leap-day
+title: Rim El Ballouli's Blog
+description: randoms from here and there
+show_downloads: false
+
+plugins:
+  - jekyll-seo-tag
+  
+
+collections_dir: collections
+
+collections:
+    - posts
+    - drafts
+
+
+# Google Analytics
+google_analytics: UA-147164583-1
+
+google_verify: ve2lVCW3f_Z8QELKalmk0LVq3BeBhWQjKlU-0IQYBYI
