@@ -50,6 +50,6 @@ the hyperlink preview i.e. image, title, description. The meta tag with property
 </head>
 ```
 
- If you are using Jekyll SEO plugin, as suggested in the previous [post][https://rim-el-ballouli.github.io/blog/jekyll/2019/08/10/seo.html], 
+ If you are using Jekyll SEO plugin, as suggested in the previous [post](https://rim-el-ballouli.github.io/blog/jekyll/2019/08/10/seo.html), 
  then these meta tags and others are automatically added to each page of your website according the front matter defined. 
  Therefore, you don't have to go under the trouble of defining each. However you still have to define the meta tag for the image thumbnail.  
