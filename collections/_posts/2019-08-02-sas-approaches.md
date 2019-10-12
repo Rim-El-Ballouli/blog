@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "A Mind map of approaches in engineering self-adaptive systems"
+title: "A mind map of approaches in engineering self-adaptive systems"
 description: An overview of various approaches in realizing self-adaptive systems
 author: Rim El Ballouli
 social:

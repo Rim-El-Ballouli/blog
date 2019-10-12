@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Setting the thumbnail picture for hyperlinks on linkedin | Rim El Ballouli’s Blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Setting the thumbnail picture for hyperlinks on linkedin" />
+<meta name="author" content="Rim El Ballouli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="adding your jekyll website to google’s search index" />
+<meta property="og:description" content="adding your jekyll website to google’s search index" />
+<link rel="canonical" href="http://localhost:4000/jekyll/2019/08/12/thumbnail.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/2019/08/12/thumbnail.html" />
+<meta property="og:site_name" content="Rim El Ballouli’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-12T00:00:00+02:00" />
+<script type="application/ld+json">
+{"headline":"Setting the thumbnail picture for hyperlinks on linkedin","dateModified":"2019-08-12T00:00:00+02:00","datePublished":"2019-08-12T00:00:00+02:00","author":{"@type":"Person","name":"Rim El Ballouli"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/2019/08/12/thumbnail.html"},"description":"adding your jekyll website to google’s search index","@type":"BlogPosting","url":"http://localhost:4000/jekyll/2019/08/12/thumbnail.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=227f085bdfc9df6a55eec7d0a36d0b372ea1159f">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+
+      <header>
+        <h1>Rim El Ballouli's Blog</h1> <!--Setting the thumbnail picture for hyperlinks on linkedin-->
+         <p>a compilation of random thoughts</p> <!--adding your jekyll website to google's search index-->
+      </header>
+
+	 <div id="banner">
+	 <h1 class="fork">Setting the thumbnail picture for hyperlinks on linkedin</h1>
+	  </div>
+        
+      </div><!-- end banner -->
+      
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3 id="how-to-specify-the-thumbnail-picture-on-linkedin-when-linking-to-a-jekyll-site">How to specify the thumbnail picture on linkedin when linking to a jekyll site?</h3>
+
+<p class="note"> The proposed solution is not specific neither for linkedin nor for a jekyll based website.
+The solution is infact generic and applicable to any site that displays hyperlinks in a preview format such as Facebook. 
+Jekyll and linkedin were intentionally added to the title to help any beginner searching for the solution 
+thinking its specific for linkedin and jekyll find a solution (me a month ago &#128517;).</p>
+
+<p>Hyperlinks on Linkedin are displayed in a <strong>preview</strong> mode as a combination of three things a thumbnail picture, 
+title and brief description as shown below:</p>
+
+<p><img src="/assets/images/linkpreview.png" width="500" /></p>
+
+<p>Say your posting a link to your blog post/webpage, if the thumbnail, title and description are not directly specified, 
+linkedin (or other sites) will automatically extract this information from the hyperlink and display them in the preview mode.</p>
+
+<p>This may cause an issue especially if the image does not confirm to the size of a thumbnail, causing it to be cropped.
+In order to be in control of what is displayed you must have read/write access to the website you are linking. 
+If you don’t then there is not much you can do.</p>
+
+<p>Assuming that you have read/write access, then you can control what is displayed by adding only three <strong>&lt;meta&gt;</strong> tags 
+to the &lt;head&gt; tag of your blog post/webpage. Each <strong>&lt;meta&gt;</strong> tag will specify one of the fields to be displayed in 
+the hyperlink preview i.e. image, title, description. The meta tag with property:</p>
+
+<ul>
+  <li><strong>og:image</strong> - sets the URL for the thumbnail image</li>
+  <li><strong>og:title</strong> - sets the title of the page</li>
+  <li><strong>og:description</strong> - sets the description of the page</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span> 
+...
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"/assets/images/thumbnail.png"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Why you should visit Belgium?"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Great food, friendly people awesome word press .."</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
+
+<p>If you are using Jekyll SEO plugin, as suggested in the previous [post][https://rim-el-ballouli.github.io/blog/jekyll/2019/08/10/seo.html], 
+ then these meta tags and others are automatically added to each page of your website according the front matter defined. 
+ Therefore, you don’t have to go under the trouble of defining each. However you still have to define the meta tag for the image thumbnail.</p>
+
+
+      </section>
+      <footer>
+        
+          <p>Project maintained <br/> by <a href="https://github.com/Rim-El-Ballouli">Rim-El-Ballouli</a></p>
+        
+        <p><small>Hosted on GitHub Pages</small></p> <!-- &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>-->
+      </footer>
+    </div>
+
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-147164583-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>
