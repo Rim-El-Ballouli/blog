@@ -18,9 +18,9 @@ categories: Jekyll
 <p class="note"> The proposed solution is not specific neither for linkedin nor for a jekyll based website.
 The solution is infact generic and applicable to any site that displays hyperlinks in a preview format such as Facebook. 
 Jekyll and linkedin were intentionally added to the title to help any beginner searching for the solution 
-thinking its specific for linkedin and jekyll find a solution (me a month ago &#128517;).</p> 
+thinking  that its specific for linkedin and jekyll (thats me a month ago &#128517;).</p> 
 
-Hyperlinks on Linkedin are displayed in a **preview** mode as a combination of three things a thumbnail picture, 
+Hyperlinks on Linkedin are displayed in a **preview**  format as a combination of three things a thumbnail picture, 
 title and brief description as shown below:
 
 <img src="/assets/images/linkpreview.png" width="500">
