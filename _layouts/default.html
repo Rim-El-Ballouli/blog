@@ -30,10 +30,10 @@
       <nav>
         <ul></ul>
       </nav>
-      <section>
-        {{ content }}
+      <article>
+        {{ content | markdownify}}
 
-      </section>
+      </article>
       <footer>
         {% if site.github.is_project_page %}
           <p>Project maintained <br/> by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>

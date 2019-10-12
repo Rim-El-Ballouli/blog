@@ -12,8 +12,6 @@ social:
 lang: en_US
 categories: Self-adaptive-systems
 ---
-<article>
-
 ### How are self-adaptive systems engineered?
 
 This post is my best effort of making sense of existing works withen 
@@ -34,4 +32,3 @@ system whose behavior can change according to a set of well-formed mathematical 
 can be formally analyzed. In coming blog posts we will discuss the details of each approach.
 
 <img  width="700" class="center" src="/assets/images/sas-approach.png">
-</article>
