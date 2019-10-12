@@ -23,7 +23,7 @@ thinking its specific for linkedin and jekyll find a solution (me a month ago &#
 Hyperlinks on Linkedin are displayed in a **preview** mode as a combination of three things a thumbnail picture, 
 title and brief description as shown below:
 
-<img src="/assets/images/linkpreview.png" width="500">
+<img src="../assets/images/linkpreview.png" width="500">
 
 Say your posting a link to your blog post/webpage, if the thumbnail, title and description are not directly specified, 
 linkedin (or other sites) will automatically extract this information from the hyperlink and display them in the preview mode. 
