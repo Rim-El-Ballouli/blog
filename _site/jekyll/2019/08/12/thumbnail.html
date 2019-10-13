@@ -49,44 +49,64 @@
       <section>
         <h3 id="how-to-specify-the-thumbnail-picture-on-linkedin-when-linking-to-a-jekyll-site">How to specify the thumbnail picture on linkedin when linking to a jekyll site?</h3>
 
-<p class="note"> The proposed solution is not specific neither for linkedin nor for a jekyll based website.
-The solution is infact generic and applicable to any site that displays hyperlinks in a preview format such as Facebook. 
-Jekyll and linkedin were intentionally added to the title to help any beginner searching for the solution 
-thinking  that its specific for linkedin and jekyll (thats me a month ago &#128517;).</p>
+<p>On linkedin there are two ways to add hyperlinks:</p>
 
-<p>Hyperlinks on Linkedin are displayed in a <strong>preview</strong>  format as a combination of three things a thumbnail picture, 
-title and brief description as shown below:</p>
+<ul>
+  <li>either to the profile page’s sections including the about, experience, education sections etc.</li>
+  <li>or to a catered post</li>
+</ul>
 
-<p><img src="/blog/assets/images/linkpreview.png" width="500" /></p>
+<p>Hyperlinks on Linkedin are displayed in a <strong>preview</strong> format as a combination of three things a thumbnail picture, 
+title and website URL. Below are two sample images showing hyperlinks in preview mode in two different ways on linkedin.</p>
 
-<p>Say your posting a link to your blog post/webpage, if the thumbnail, title and description are not directly specified, 
-linkedin (or other sites) will automatically extract this information from the hyperlink and display them in the preview mode.</p>
+<p><img src="/assets/images/profilepreview.png" width="350" style="float:left;margin-right:10px;margin-top:25px" /></p>
 
-<p>This may cause an issue especially if the image does not confirm to the size of a thumbnail, causing it to be cropped.
-In order to be in control of what is displayed you must have read/write access to the website you are linking. 
+<p><img src="/assets/images/postpreview.png" width="150" style="" /></p>
+
+<p>If the thumbnail, title and URL are not directly specified, linkedin (and other sites that preview hyperlinks) will automatically 
+extract this information from the hyperlink and display them in the preview mode.</p>
+
+<p>This may cause an issue especially if the image does not confirm to the ideal size of a thumbnail, causing it to be scaled 
+and cropped to fit a box of 552 pixels wide by 289 pixels tall (an aspect ratio of 1.91:1). 
+The problem is visible in the above right image.</p>
+
+<p>LinkedIn recommends using a 1.91:1 aspect ratio. Hence, an image of 1,200 pixels wide and 628 pixels tall will work great for sharing 
+links with an image to LinkedIn.</p>
+
+<p>In order to be in control of what is displayed you must have read/write access to the website you are linking. 
 If you don’t then there is not much you can do.</p>
 
-<p>Assuming that you have read/write access, then you can control what is displayed by adding only three <strong>&lt;meta&gt;</strong> tags 
-to the &lt;head&gt; tag of your blog post/webpage. Each <strong>&lt;meta&gt;</strong> tag will specify one of the fields to be displayed in 
-the hyperlink preview i.e. image, title, description. The meta tag with property:</p>
+<p>Assuming that you have read/write access, then you can solve this issue in two steps.</p>
+
+<h3 id="step-1">Step 1</h3>
+<p>Create a thumbnail image confirming to the ideal aspect ratio of linkedin which is 1.91:1. (e.g.  552px * 289px)</p>
+
+<h3 id="step-2">Step 2</h3>
+<p>Add metadata that sets the title and thumbnail. Add two <strong>&lt;meta&gt;</strong> tags 
+to the &lt;head&gt; tag of the webpage you are linking. Each <strong>&lt;meta&gt;</strong> tag will specify one of the fields to be displayed in 
+the hyperlink preview i.e. image, and title. The URL can be automatically extracted from the hyperlink, there is no need to set it.
+The meta tag with property:</p>
 
 <ul>
   <li><strong>og:image</strong> - sets the URL for the thumbnail image</li>
   <li><strong>og:title</strong> - sets the title of the page</li>
-  <li><strong>og:description</strong> - sets the description of the page</li>
 </ul>
+
+<p>Below is a sample html code defining the above metadata.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span> 
 ...
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"/assets/images/thumbnail.png"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Why you should visit Belgium?"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Great food, friendly people awesome word press .."</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Webpage and blog"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 </code></pre></div></div>
-
 <p>If you are using Jekyll SEO plugin, as suggested in the previous <a href="https://rim-el-ballouli.github.io/blog/jekyll/2019/08/10/seo.html">post</a>, 
  then these meta tags and others are automatically added to each page of your website according the front matter defined. 
- Therefore, you don’t have to go under the trouble of defining each. However you still have to define the meta tag for the image thumbnail.</p>
+ Therefore, you don’t have to go under the trouble of defining each. <strong>However you still have to define the meta tag for the image thumbnail.</strong></p>
+
+<p class="note"> The proposed solution is not specific for linkedin. The solution is infact generic and applicable 
+ to any site that displays hyperlinks in a preview format such as Facebook.</p>
+
 
 
       </section>

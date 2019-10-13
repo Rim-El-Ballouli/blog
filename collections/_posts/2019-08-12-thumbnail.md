@@ -15,41 +15,58 @@ categories: Jekyll
 
 ### How to specify the thumbnail picture on linkedin when linking to a jekyll site?
 
-<p class="note"> The proposed solution is not specific neither for linkedin nor for a jekyll based website.
-The solution is infact generic and applicable to any site that displays hyperlinks in a preview format such as Facebook. 
-Jekyll and linkedin were intentionally added to the title to help any beginner searching for the solution 
-thinking  that its specific for linkedin and jekyll (thats me a month ago &#128517;).</p> 
+On linkedin there are two ways to add hyperlinks:
 
-Hyperlinks on Linkedin are displayed in a **preview**  format as a combination of three things a thumbnail picture, 
-title and brief description as shown below:
+* either to the profile page's sections including the about, experience, education sections etc.
+* or to a catered post  
 
-<img src="/blog/assets/images/linkpreview.png" width="500">
+Hyperlinks on Linkedin are displayed in a **preview** format as a combination of three things a thumbnail picture, 
+title and website URL. Below are two sample images showing hyperlinks in preview mode in two different ways on linkedin.
 
-Say your posting a link to your blog post/webpage, if the thumbnail, title and description are not directly specified, 
-linkedin (or other sites) will automatically extract this information from the hyperlink and display them in the preview mode. 
+<img src="/assets/images/profilepreview.png" width="350" style="float:left;margin-right:10px;margin-top:25px">
 
-This may cause an issue especially if the image does not confirm to the size of a thumbnail, causing it to be cropped.
+<img src="/assets/images/postpreview.png" width="150" style>
+
+If the thumbnail, title and URL are not directly specified, linkedin (and other sites that preview hyperlinks) will automatically 
+extract this information from the hyperlink and display them in the preview mode. 
+
+This may cause an issue especially if the image does not confirm to the ideal size of a thumbnail, causing it to be scaled 
+and cropped to fit a box of 552 pixels wide by 289 pixels tall (an aspect ratio of 1.91:1). 
+The problem is visible in the above right image.
+
+LinkedIn recommends using a 1.91:1 aspect ratio. Hence, an image of 1,200 pixels wide and 628 pixels tall will work great for sharing 
+links with an image to LinkedIn.
+
 In order to be in control of what is displayed you must have read/write access to the website you are linking. 
 If you don't then there is not much you can do.
 
-Assuming that you have read/write access, then you can control what is displayed by adding only three **\<meta>** tags 
-to the \<head> tag of your blog post/webpage. Each **\<meta>** tag will specify one of the fields to be displayed in 
-the hyperlink preview i.e. image, title, description. The meta tag with property: 
+Assuming that you have read/write access, then you can solve this issue in two steps.
+
+### Step 1
+Create a thumbnail image confirming to the ideal aspect ratio of linkedin which is 1.91:1. (e.g.  552px * 289px)
+
+### Step 2
+Add metadata that sets the title and thumbnail. Add two **\<meta>** tags 
+to the \<head> tag of the webpage you are linking. Each **\<meta>** tag will specify one of the fields to be displayed in 
+the hyperlink preview i.e. image, and title. The URL can be automatically extracted from the hyperlink, there is no need to set it.
+The meta tag with property: 
 
 * **og:image** - sets the URL for the thumbnail image 
 * **og:title** - sets the title of the page
-* **og:description** - sets the description of the page
 
+Below is a sample html code defining the above metadata.
 
 ```html
 <head> 
 ...
 <meta property="og:image" content="/assets/images/thumbnail.png"/>
-<meta property="og:title" content="Why you should visit Belgium?"/>
-<meta property="og:description" content="Great food, friendly people awesome word press .."/>
+<meta property="og:title" content="Webpage and blog"/>
 </head>
 ```
-
- If you are using Jekyll SEO plugin, as suggested in the previous [post](https://rim-el-ballouli.github.io/blog/jekyll/2019/08/10/seo.html), 
+If you are using Jekyll SEO plugin, as suggested in the previous [post](https://rim-el-ballouli.github.io/blog/jekyll/2019/08/10/seo.html), 
  then these meta tags and others are automatically added to each page of your website according the front matter defined. 
- Therefore, you don't have to go under the trouble of defining each. However you still have to define the meta tag for the image thumbnail.  
+ Therefore, you don't have to go under the trouble of defining each. **However you still have to define the meta tag for the image thumbnail.** 
+ 
+ <p class="note"> The proposed solution is not specific for linkedin. The solution is infact generic and applicable 
+ to any site that displays hyperlinks in a preview format such as Facebook.</p> 
+ 
