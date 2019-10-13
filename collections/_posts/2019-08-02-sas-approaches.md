@@ -31,4 +31,4 @@ engineering perspective implies designing a control-based self-adaptive
 system whose behavior can change according to a set of well-formed mathematical models that 
 can be formally analyzed. In coming blog posts we will discuss the details of each approach.
 
-<img  width="700" class="center" src="/assets/images/sas-approach.png">
+<img  width="700" class="center" src="/blog/assets/images/sas-approach.png">
