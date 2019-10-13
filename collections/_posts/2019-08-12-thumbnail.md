@@ -23,9 +23,9 @@ On linkedin there are two ways to add hyperlinks:
 Hyperlinks on Linkedin are displayed in a **preview** format as a combination of three things a thumbnail picture, 
 title and website URL. Below are two sample images showing hyperlinks in preview mode in two different ways on linkedin.
 
-<img src="/assets/images/profilepreview.png" width="350" style="float:left;margin-right:10px;margin-top:25px">
+<img src="/blog/assets/images/profilepreview.png" width="350" style="float:left;margin-right:10px;margin-top:25px">
 
-<img src="/assets/images/postpreview.png" width="150" style>
+<img src="/blog/assets/images/postpreview.png" width="150" style>
 
 If the thumbnail, title and URL are not directly specified, linkedin (and other sites that preview hyperlinks) will automatically 
 extract this information from the hyperlink and display them in the preview mode. 
